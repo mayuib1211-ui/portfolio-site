@@ -1,0 +1,201 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+// ===========================
+// Works
+// ===========================
+
+.works {
+    @include m.section-padding;
+    background: linear-gradient(180deg, #E6F8FF 0%, #F6FBFF 50%, #CEE6FF 100%);
+
+    &__label {
+        @include m.section-title-label;
+    }
+
+    &__title {
+        @include m.section-title;
+    }
+
+    // カテゴリグループ
+    &__group {
+        margin-top: 12rem;
+
+        @include m.sp {
+            margin-top: 4rem;
+        }
+    }
+
+    &__category {
+        width: 95%;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: v.$color-main;
+        padding-bottom: 1.2rem;
+        border-bottom: 1px solid v.$title-color-border;
+        margin-bottom: 2.4rem;
+        margin-inline: auto;
+    }
+
+    &__category-note {
+        font-size: 1.2rem;
+        color: #999;
+        font-weight: 400;
+    }
+
+    // 通常リスト
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+
+        // バナーだけ上書き
+        &--banner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.6rem;
+            width: 95%;
+            margin-inline: auto;
+            align-items: unset; // ← flexのalign-itemsをリセット
+
+            @include m.tab {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include m.sp {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    // 各アイテム
+    &__item {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+        padding: 2.4rem;
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        @include m.sp {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    &__item-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: v.$color-main;
+    }
+
+    &__date {
+        font-size: 1.3rem;
+        color: v.$color-border;
+    }
+
+    // タグ
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__tag {
+        font-size: 1.2rem;
+        padding: 0.3rem 1rem;
+        border: 1px solid #ddd;
+        color: #3a3a3a;
+        background: #fafafa;
+
+        &--type {
+            background: rgba(v.$color-accent, 0.08);
+            border-color: rgba(v.$color-accent, 0.3);
+            color: v.$color-accent;
+        }
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+
+    &__link {
+        font-size: 1.3rem;
+        color: v.$color-accent;
+        letter-spacing: 0.05em;
+        transition: opacity 0.2s;
+        text-align: right;
+        margin-right: 1rem;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    // サムネイル
+    &__thumb {
+        width: 24rem;
+        flex-shrink: 0;
+        position: relative;
+        background: #f0f0f0;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+
+        @include m.sp {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+        }
+    }
+
+    &__thumb-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        color: #aaa;
+    }
+
+    // バナーリスト
+    &__banner-item {
+        @include m.sp {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

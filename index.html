@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Code Latteは、デザインから開発まで一貫して対応できる5人の制作チームです。">
+  <title>Code Latte</title>
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Shippori+Mincho:wght@400;500&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner wrapper">
+      <div class="header__logo">
+        <a href="index.html">Code Latte</a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#about">About</a></li>
+          <li class="header__nav-item"><a href="#skill">Skill</a></li>
+          <li class="header__nav-item"><a href="#works">Works</a></li>
+          <li class="header__nav-item"><a href="#reasons">Reasons</a></li>
+          <li class="header__nav-item"><a href="#service">Service</a></li>
+          <li class="header__nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- ハンバーガー -->
+      <button class="header__hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ドロワーメニュー -->
+  <div class="drawer">
+    <nav class="drawer__nav">
+      <ul class="drawer__nav-list">
+        <li class="drawer__nav-item"><a href="#about">About</a></li>
+        <li class="drawer__nav-item"><a href="#skill">Skill</a></li>
+        <li class="drawer__nav-item"><a href="#works">Works</a></li>
+        <li class="drawer__nav-item"><a href="#reasons">Reasons</a></li>
+        <li class="drawer__nav-item"><a href="#service">Service</a></li>
+        <li class="drawer__nav-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="drawer-overlay"></div>
+
+
+  <main>
+    <!-- fvの外、上に置く -->
+    <div class="fv-blob">
+      <img src="img/hero/fv_bgimg.webp" alt="" loading="eager">
+    </div>
+
+    <!-- FV -->
+    <section class="fv">
+      <div class="fv__inner wrapper">
+        <div class="fv__content">
+          <p class="fv__sub">Web Design & Development</p>
+          <h1 class="fv__title">Code Latte</h1>
+          <p class="fv__text">想いを形に。<br>デザインから開発まで<br>一貫して対応致します。</p>
+          <a href="#works" class="fv__btn">Works を見る</a>
+          <div class="fv__scroll">
+            <div class="fv__scroll-text">scroll</div>
+            <div class="fv__scroll-border"></div>
+          </div>
+        </div>
+        <!-- FV画像エリア更新 -->
+        <div class="fv__image">
+          <!-- <div class="fv__image-wrap">
+          <img class="fv__image-main" src="img/hero/hero_img1.png" alt="制作実績モックアップ">
+          <img class="fv__image-sub" src="img/hero/hero_img2.png" alt="制作実績モックアップ2" loading="eager">
+        </div> -->
+          <ul class="fv__image-list fadein">
+            <li><img src="img/hero/hero_img1.png" alt="制作実績モックアップ" loading="eager"></li>
+            <li><img src="img/hero/hero_img2.png" alt="制作実績モックアップ2" loading="eager"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about" id="about">
+
+      <div class="wrapper">
+        <!-- チームについて -->
+        <div class="about__team">
+          <p class="about__label">Team Introduction</p>
+          <h2 class="about__title">チームについて</h2>
+          <div class="about__team-inner">
+            <div class="about__logo">
+              <img src="images/logo.png" alt="Code Latte">
+            </div>
+            <div class="about__team-text">
+              <p class="about__team-name">Code Latte</p>
+              <p class="about__team-name-en">コード ラテ</p>
+              <p class="about__team-desc">私たちCode
+                Latteは、デザインと開発を一貫して対応できる5人の制作チームです。見た目の美しさと使いやすさを両立したWebサイト・アプリを、お客様と丁寧にコミュニケーションを取りながら制作しています。アイデアをカタチにするお手伝い、ぜひお気軽にご相談ください。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 大切にしていること -->
+        <div class="about__values">
+          <h3 class="about__values-title">大切にしていること</h3>
+          <div class="about__values-inner">
+            <p class="about__values-text">お客様のご要望やビジョンをしっかりとヒアリングし、その想いをWebというカタチで表現することを大切にしています。
+              「こんなサイトにしたい」「こんな雰囲気が好き」そんなふんわりしたイメージでも、一緒に丁寧に形にしていきます。<br>
+              <span class="text-padding"></span>
+
+              制作中もこまめにご確認いただきながら進めるので、完成したときに「思っていたのと違う」とならないよう、コミュニケーションを大切にしています。
+              お客様にとって使いやすく、訪れた方にとっても心地よいサイトを目指して、チーム一丸となって取り組んでいます。
+            </p>
+            <img class="about__values-img" src="img/about/values.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- メンバー紹介 -->
+        <div class="about__members">
+          <h3 class="about__members-title">メンバーのご紹介</h3>
+          <ul class="about__members-list">
+            <li class="about__member-card">
+              <div class="about__member-inner">
+                <img class="about__member-img" src="img/about/kou.jpg" alt="こう">
+                <p class="about__member-name">こう</p>
+              </div>
+              <div class="about__member-desc">
+                <p class="about__member-role">チームリーダー</p>
+                <p class="about__member-skills">かんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらい</p>
+              </div>
+            </li>
+            <li class="about__member-card">
+              <div class="about__member-inner">
+                <img class="about__member-img" src="img/about/kou.jpg" alt="あや">
+                <p class="about__member-name">あや</p>
+              </div>
+              <div class="about__member-desc">
+                <p class="about__member-role">バックエンド<br>フロントエンド</p>
+                <p class="about__member-skills">かんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらい</p>
+              </div>
+            </li>
+            <li class="about__member-card">
+              <div class="about__member-inner">
+                <img class="about__member-img" src="img/about/kou.jpg" alt="まい">
+                <p class="about__member-name">まい</p>
+              </div>
+              <div class="about__member-desc">
+                <p class="about__member-role">バックエンド<br>フロントエンド</p>
+                <p class="about__member-skills">かんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらい</p>
+              </div>
+            </li>
+            <li class="about__member-card">
+              <div class="about__member-inner">
+                <img class="about__member-img" src="img/about/kou.jpg" alt="さくら">
+                <p class="about__member-name">さくら</p>
+              </div>
+              <div class="about__member-desc">
+                <p class="about__member-role">デザイン<br>フロントエンド</p>
+                <p class="about__member-skills">かんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらいかんたんな自己紹介３行くらい</p>
+              </div>
+            </li>
+            <li class="about__member-card">
+              <div class="about__member-inner">
+                <img class="about__member-img" src="img/about/kou.jpg" alt="まゆみ">
+                <p class="about__member-name">まゆみ</p>
+              </div>
+              <div class="about__member-desc">
+                <p class="about__member-role">デザイン<br>フロントエンド</p>
+                <p class="about__member-skills">やさしく温かみのある世界観づくりと、伝わるサイト設計を得意としています。</p>
+              </div>
+            </li>
+          </ul>
+          <a href="member-page.html" class="about__btn">詳しく見る</a>
+
+          <div class="marquee">
+            <div class="marquee__inner">
+              <span>Code Latte</span>
+              <span>Code Latte</span>
+              <span>Code Latte</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="about__bg" src="img/about/about_bgimg.webp" alt="">
+    </section>
+
+    <section class="skill" id="skill">
+      <img class="skill__bg" src="img/skill/skill_bgimg.webp" alt="">
+      <div class="wrapper">
+        <!-- スキル -->
+
+        <p class="skill__label">Skills</p>
+        <h2 class="skill__title">スキル</h2>
+
+        <p class="skill__intro">各メンバーが専門分野を持ち、<br>デザインから開発まで一貫した制作を行っています。</p>
+        <div class="skill__cards">
+
+          <div class="skill__card skill__card--frontend">
+            <div class="skill__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill__name">フロントエンド開発</h3>
+            <p class="skill__desc">HTML / CSS / JavaScript を用いて、見やすく使いやすい Web サイトを実装します。スマートフォンにも対応したレスポンシブ設計が可能です。</p>
+            <div class="skill__tech">
+              <p class="skill__tech-label">使用技術</p>
+              <ul class="skill__tags">
+                <li class="skill__tag">HTML</li>
+                <li class="skill__tag">CSS</li>
+                <li class="skill__tag">React</li>
+                <li class="skill__tag">JavaScript</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill__card skill__card--backend">
+            <div class="skill__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 class="skill__name">バックエンド開発</h3>
+            <p class="skill__desc">PHP を用いたバックエンド開発や、データ処理・フォーム機能の実装、WordPress のカスタマイズに対応しています。</p>
+            <div class="skill__tech">
+              <p class="skill__tech-label">使用技術</p>
+              <ul class="skill__tags">
+                <li class="skill__tag">PHP</li>
+                <li class="skill__tag">WordPress</li>
+                <li class="skill__tag">MySQL</li>
+                <li class="skill__tag">REST API</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill__card skill__card--design">
+            <div class="skill__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="skill__name">デザイン</h3>
+            <p class="skill__desc">Figma を使用し、ユーザー視点を意識した UI 設計・デザイン制作を行います。</p>
+            <div class="skill__tech">
+              <p class="skill__tech-label">使用技術</p>
+              <ul class="skill__tags">
+                <li class="skill__tag">Figma</li>
+                <li class="skill__tag">Photoshop</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="works">
+      <div class="wrapper">
+
+        <p class="works__label">Works</p>
+        <h2 class="works__title">実績のご紹介</h2>
+
+        <!-- HP -->
+        <div class="works__group">
+          <h3 class="works__category">HP</h3>
+          <ul class="works__list">
+
+            <li class="works__item">
+              <div class="works__item-left">
+                <div class="works__meta">
+                  <h4 class="works__name">Aillty様 HP</h4>
+                  <p class="works__date">2025.11-12 / 3名</p>
+                  <ul class="works__tags">
+                    <li class="works__tag">HTML</li>
+                    <li class="works__tag">CSS</li>
+                    <li class="works__tag">JS</li>
+                    <li class="works__tag works__tag--type">企業サイト</li>
+                    <li class="works__tag works__tag--type">コーディング</li>
+                    <li class="works__tag works__tag--type">ライティング</li>
+                  </ul>
+                </div>
+                <p class="works__desc">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                <a href="project/aillty.html" class="works__link" target="_blank">詳しく見る →</a>
+              </div>
+              <div class="works__thumb">
+                <img src="img/works/hp02.jpg" alt="Aillty HP">
+              </div>
+            </li>
+
+
+            <li class="works__item">
+              <div class="works__item-left">
+                <div class="works__meta">
+                  <h4 class="works__name">プログラミングスクール HP（ハッカソン）</h4>
+                  <p class="works__date">2025.11-12 / 3名</p>
+                  <ul class="works__tags">
+                    <li class="works__tag">HTML</li>
+                    <li class="works__tag">CSS</li>
+                    <li class="works__tag">JS</li>
+                    <li class="works__tag works__tag--type">企業サイト</li>
+                    <li class="works__tag works__tag--type">コーディング</li>
+                    <li class="works__tag works__tag--type">ライティング</li>
+                  </ul>
+                </div>
+                <p class="works__desc">プログラミングスクールを運営する企業のWebサイトを制作しました。視認性と使いやすさを重視し、お問い合わせにつながる導線設計を行いました。</p>
+                <a href="project/pronavi_sakura.html" class="works__link">詳しく見る →</a>
+              </div>
+              <div class="works__thumb">
+                <img src="img/works/hp03.jpg" alt="プログラミングスクール HP">
+              </div>
+            </li>
+
+            <li class="works__item">
+              <div class="works__item-left">
+                <div class="works__meta">
+                  <h4 class="works__name">プログラミングスクール HP（ハッカソン）</h4>
+                  <p class="works__date">2025.11-12 / 3名</p>
+                  <ul class="works__tags">
+                    <li class="works__tag">HTML</li>
+                    <li class="works__tag">CSS</li>
+                    <li class="works__tag">JS</li>
+                    <li class="works__tag works__tag--type">企業サイト</li>
+                    <li class="works__tag works__tag--type">コーディング</li>
+                    <li class="works__tag works__tag--type">ライティング</li>
+                  </ul>
+                </div>
+                <p class="works__desc">プログラミングスクールを運営する企業のWebサイトを制作しました。視認性と使いやすさを重視し、お問い合わせにつながる導線設計を行いました。</p>
+                <a href="project/pronavi_mayumi.html" class="works__link">詳しく見る →</a>
+              </div>
+              <div class="works__thumb">
+                <img src="img/works/hp04.jpg" alt="プログラミングスクール HP">
+              </div>
+            </li>
+
+            <li class="works__item">
+              <div class="works__item-left">
+                <div class="works__meta">
+                  <h4 class="works__name">保護ねこ HP（自主制作）</h4>
+
+                  <p class="works__date">2026.12-2 / 1名</p>
+
+                  <div class="works__tags-wrap">
+                    <ul class="works__tags">
+                      <li class="works__tag">HTML</li>
+                      <li class="works__tag">CSS</li>
+                      <li class="works__tag">JS</li>
+                      <li class="works__tag works__tag--type">企業サイト</li>
+                      <li class="works__tag works__tag--type">コーディング</li>
+                      <li class="works__tag works__tag--type">ライティング</li>
+                    </ul>
+                  </div>
+
+                  <p class="works__desc">保護猫の里親募集を目的とし、温かみのある雰囲気が伝わるWebサイトを制作しました。</p>
+                  <a href="project/paw-link.html" class="works__link">詳しく見る →</a>
+
+                </div>
+              </div>
+              <div class="works__thumb">
+                <img src="img/works/hp05.jpg" alt="保護ねこ HP">
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- アプリ -->
+        <div class="works__group">
+          <h3 class="works__category">アプリ</h3>
+          <ul class="works__list">
+
+            <li class="works__item">
+              <div class="works__item-left">
+                <div class="works__meta">
+                  <h4 class="works__name">タスク管理アプリ</h4>
+                  <p class="works__date">2026.04 / 1名</p>
+                  <ul class="works__tags">
+                    <li class="works__tag">HTML</li>
+                    <li class="works__tag">CSS</li>
+                    <li class="works__tag">JS</li>
+                    <li class="works__tag works__tag--type">デザイン</li>
+                    <li class="works__tag works__tag--type">コーディング</li>
+                    <li class="works__tag works__tag--type">ライティング</li>
+                  </ul>
+                </div>
+                <p class="works__desc">プログラミングスクールを運営する企業のWebサイトを制作しました。視認性と使いやすさを重視し、お問い合わせにつながる導線設計を行いました。</p>
+                <a href="#" class="works__link">詳しく見る →</a>
+              </div>
+              <div class="works__thumb">
+                <span class="works__thumb-label">Thumbnail</span>
+                <img src="img/works/works_app01.jpg" alt="タスク管理アプリ">
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- バナー -->
+        <div class="works__group">
+          <h3 class="works__category">バナー</h3>
+          <ul class="works__list works__list--banner">
+            <li class="works__banner-item">
+              <img src="img/works/banner01.jpg" alt="バナー1">
+            </li>
+            <li class="works__banner-item">
+              <img src="img/works/banner02.jpg" alt="バナー2">
+            </li>
+          </ul>
+        </div>
+
+        <!-- LP -->
+        <div class="works__group">
+          <h3 class="works__category">LP<span class="works__category-note">（準備中）</span></h3>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="reasons" id="reasons">
+      <img class="reasons__bg" src="img/reasons/reasons_bgimg.webp" alt="">
+      <div class="wrapper">
+
+        <p class="reasons__label">Reasons</p>
+        <h2 class="reasons__title">選ばれる理由</h2>
+
+        <p class="reasons__intro">デザインから開発まで、ワンストップで対応します。</p>
+
+        <div class="reasons__cards">
+
+          <div class="reasons__card">
+            <div class="reasons__card-header">
+              <span class="reasons__num">01</span>
+              <h3 class="reasons__name">デザイン × 開発の両立</h3>
+            </div>
+            <p class="reasons__sub">デザインから実装まで一貫対応</p>
+            <div class="reasons__img">
+              <img src="img/reasons/reasons01.svg" alt="">
+            </div>
+            <p class="reasons__desc">デザイナーとエンジニアが連携し、見た目の美しさと使いやすさを両立したサイトを制作します。</p>
+          </div>
+
+          <div class="reasons__card">
+            <div class="reasons__card-header">
+              <span class="reasons__num">02</span>
+              <h3 class="reasons__name">幅広い制作対応</h3>
+            </div>
+            <p class="reasons__sub">Webサイトからアプリまで柔軟に対応</p>
+            <div class="reasons__img">
+              <img src="img/reasons/reasons02.svg" alt="">
+            </div>
+            <p class="reasons__desc">コーポレートサイト、LP、アプリ、バナーなど、目的に合わせて最適な制作をご提案します。</p>
+          </div>
+
+          <div class="reasons__card">
+            <div class="reasons__card-header">
+              <span class="reasons__num">03</span>
+              <h3 class="reasons__name">丁寧なヒアリング</h3>
+            </div>
+            <p class="reasons__sub">目的に寄り添った提案力</p>
+            <div class="reasons__img">
+              <img src="img/reasons/reasons03.svg" alt="">
+            </div>
+            <p class="reasons__desc">お客様の課題やご要望を丁寧にヒアリングし、目的達成につながる最適なプランをご提案します。</p>
+          </div>
+
+          <div class="reasons__card">
+            <div class="reasons__card-header">
+              <span class="reasons__num">04</span>
+              <h3 class="reasons__name">継続的な改善支援</h3>
+            </div>
+            <p class="reasons__sub">公開後の運用・改善にも対応</p>
+            <div class="reasons__img">
+              <img src="img/reasons/reasons04.svg" alt="">
+            </div>
+            <p class="reasons__desc">公開後の更新や改善についても、ご要望に応じて柔軟にサポートいたします。</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="wrapper">
+
+        <p class="service__label">Services</p>
+        <h2 class="service__title">ご提供できるサービス</h2>
+
+        <div class="service__cards">
+
+          <div class="service__card service__card--1">
+            <span class="service__num">01</span>
+            <h3 class="service__name">アプリ開発</h3>
+            <div class="service__img">
+              <img src="img/service/service01.svg" alt="">
+            </div>
+            <button class="service__btn" data-modal="modal-app">詳しく見る</button>
+          </div>
+
+          <div class="service__card service__card--2">
+            <span class="service__num">02</span>
+            <h3 class="service__name">Webサイト制作</h3>
+            <div class="service__img">
+              <img src="img/service/service02.svg" alt="">
+            </div>
+            <button class="service__btn" data-modal="modal-web">詳しく見る</button>
+          </div>
+
+          <div class="service__card service__card--3">
+            <span class="service__num">03</span>
+            <h3 class="service__name">LP制作</h3>
+            <div class="service__img">
+              <img src="img/service/service03.svg" alt="">
+            </div>
+            <button class="service__btn" data-modal="modal-lp">詳しく見る</button>
+          </div>
+
+          <div class="service__card service__card--4">
+            <span class="service__num">04</span>
+            <h3 class="service__name">バナー制作</h3>
+            <div class="service__img">
+              <img src="img/service/service04.svg" alt="">
+            </div>
+            <button class="service__btn" data-modal="modal-banner">詳しく見る</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- モーダル -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <!-- アプリ開発 -->
+    <div class="modal" id="modal-app">
+      <button class="modal__close" aria-label="閉じる"><i data-lucide="x"></i></button>
+      <div class="modal__inner">
+        <div class="modal__left">
+          <div class="modal__heading">
+            <i data-lucide="smartphone" width="30" height="30"></i>
+            <h3 class="modal__title">アプリ開発</h3>
+          </div>
+          <hr class="modal__line">
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="pencil-ruler"></i>制作内容</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>UI/UXデザイン</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>フロントエンド開発</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>バックエンド開発</li>
+            </ul>
+          </div>
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="lightbulb"></i>こんな方におすすめ</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>オリジナルアプリを作りたい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>業務効率化のツールが欲しい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>アイデアを形にしたい</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal__right">
+          <img src="img/service/modal-app.jpg" alt="アプリ開発">
+        </div>
+      </div>
+      <hr class="modal__line">
+      <p class="modal__desc">UI/UX設計からフロントエンド・バックエンド開発まで、目的に応じたアプリ制作を行います。</p>
+      <a href="#contact" class="modal__btn">相談する</a>
+    </div>
+
+    <!-- Webサイト制作 -->
+    <div class="modal" id="modal-web">
+      <button class="modal__close" aria-label="閉じる"><i data-lucide="x"></i></button>
+      <div class="modal__inner">
+        <div class="modal__left">
+          <div class="modal__heading">
+            <i data-lucide="monitor" width="28" height="28"></i>
+            <h3 class="modal__title">WEBサイト制作</h3>
+          </div>
+          <hr class="modal__line">
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="pencil-ruler"></i>制作内容</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>デザイン</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>コーディング</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>ワードプレス構築</li>
+            </ul>
+          </div>
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="lightbulb"></i>こんな方におすすめ</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>会社・サービスのサイトを作りたい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>既存サイトをリニューアルしたい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>スマホ対応のサイトが欲しい</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal__right">
+          <img src="img/service/modal-web.jpg" alt="Webサイト制作">
+        </div>
+      </div>
+      <hr class="modal__line">
+      <p class="modal__desc">企業サイト・サービスサイトに対応。コーポレートサイトやサービスサイトなど、目的に合わせたWebサイトを制作します。</p>
+      <a href="#contact" class="modal__btn">相談する</a>
+    </div>
+
+    <!-- LP制作 -->
+    <div class="modal" id="modal-lp">
+      <button class="modal__close" aria-label="閉じる"><i data-lucide="x"></i></button>
+      <div class="modal__inner">
+        <div class="modal__left">
+          <div class="modal__heading">
+            <i data-lucide="file-text" width="30" height="30"></i>
+            <h3 class="modal__title">LP制作</h3>
+          </div>
+          <hr class="modal__line">
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="pencil-ruler"></i>制作内容</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>構成設計</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>デザイン</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>コーディング</li>
+            </ul>
+          </div>
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="lightbulb"></i>こんな方におすすめ</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>商品・サービスを効果的に伝えたい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>問い合わせ・購入につなげたい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>キャンペーンページが欲しい</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal__right">
+          <img src="img/service/modal-lp.jpg" alt="LP制作">
+        </div>
+      </div>
+      <hr class="modal__line">
+      <p class="modal__desc">構成・デザイン・導線設計まで一貫して、コンバージョンにつながるLPを制作します。</p>
+      <a href="#contact" class="modal__btn">相談する</a>
+    </div>
+
+    <!-- バナー制作 -->
+    <div class="modal" id="modal-banner">
+      <button class="modal__close" aria-label="閉じる"><i data-lucide="x"></i></button>
+      <div class="modal__inner">
+        <div class="modal__left">
+          <div class="modal__heading">
+            <i data-lucide="image" width="30" height="30"></i>
+            <h3 class="modal__title">バナー制作</h3>
+          </div>
+          <hr class="modal__line">
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="pencil-ruler"></i>制作内容</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>広告バナーデザイン</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>SNS用画像制作</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>各種サイズ対応</li>
+            </ul>
+          </div>
+          <div class="modal__section">
+            <p class="modal__section-title"><i data-lucide="lightbulb"></i>こんな方におすすめ</p>
+            <ul class="modal__list">
+              <li><i data-lucide="square-check" width="17" height="17"></i>広告用バナーが欲しい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>SNS画像をプロに頼みたい</li>
+              <li><i data-lucide="square-check" width="17" height="17"></i>ブランドイメージを統一したい</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal__right">
+          <img src="img/service/modal-banner.jpg" alt="バナー制作">
+        </div>
+      </div>
+      <hr class="modal__line">
+      <p class="modal__desc">広告用バナーやSNS画像など、目的に応じたデザインをご提案します。</p>
+      <a href="#contact" class="modal__btn">相談する</a>
+    </div>
+
+
+    <section class="contact" id="contact">
+      <img class="contact__bg" src="img/contact/contact_bgimg.webp" alt="">
+      <div class="wrapper">
+
+        <p class="contact__label">Contact</p>
+        <h2 class="contact__title">お問い合わせ</h2>
+
+        <p class="contact__intro">まずはお気軽にご相談ください。<br>ご要望に合わせて最適なプランをご提案します。</p>
+
+        <form class="contact__form" action="#" method="post">
+
+          <!-- 問い合わせ種別 -->
+          <div class="contact__field">
+            <p class="contact__label-field">お問い合わせ種別<span class="contact__required">*</span></p>
+            <div class="contact__line"></div>
+            <ul class="contact__checks">
+              <li><label><input type="checkbox" name="type" value="web"> Webサイト制作（コーポレートサイトなど）</label></li>
+              <li><label><input type="checkbox" name="type" value="lp"> LP制作</label></li>
+              <li><label><input type="checkbox" name="type" value="app"> アプリ開発</label></li>
+              <li><label><input type="checkbox" name="type" value="design"> デザインのみ（バナー・UIなど）</label></li>
+              <li><label><input type="checkbox" name="type" value="consult"> 相談したい（未定）</label></li>
+            </ul>
+          </div>
+
+          <!-- お名前 -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="name">お名前<span class="contact__required">*</span></label>
+            <input class="contact__input" type="text" id="name" name="name" required>
+          </div>
+
+          <!-- 会社名 -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="company">会社名</label>
+            <input class="contact__input" type="text" id="company" name="company">
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="email">メールアドレス<span class="contact__required">*</span></label>
+            <input class="contact__input" type="email" id="email" name="email" required>
+          </div>
+
+          <!-- 予算 -->
+          <div class="contact__field">
+            <p class="contact__label-field">予算<span class="contact__required">*</span></p>
+            <div class="contact__line"></div>
+            <ul class="contact__checks">
+              <li><label><input type="checkbox" name="budget" value="under10"> 〜10万円</label></li>
+              <li><label><input type="checkbox" name="budget" value="10to30"> 10〜30万円</label></li>
+              <li><label><input type="checkbox" name="budget" value="over30"> 30万円以上</label></li>
+              <li><label><input type="checkbox" name="budget" value="undecided"> 未定</label></li>
+            </ul>
+          </div>
+
+          <!-- 納期 -->
+          <div class="contact__field">
+            <p class="contact__label-field">納期<span class="contact__required">*</span></p>
+            <div class="contact__line"></div>
+            <ul class="contact__checks">
+              <li><label><input type="checkbox" name="deadline" value="asap"> できるだけ早く</label></li>
+              <li><label><input type="checkbox" name="deadline" value="1month"> 1ヶ月以内</label></li>
+              <li><label><input type="checkbox" name="deadline" value="2to3"> 2〜3ヶ月</label></li>
+              <li><label><input type="checkbox" name="deadline" value="undecided"> 未定</label></li>
+            </ul>
+          </div>
+
+          <!-- お問い合わせ内容 -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="message">お問い合わせ内容</label>
+            <textarea class="contact__textarea" id="message" name="message" rows="6"></textarea>
+          </div>
+
+          <!-- プライバシーポリシー -->
+          <div class="contact__privacy">
+            <label><input type="checkbox" name="privacy" required>
+              <a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意する
+            </label>
+          </div>
+
+          <button class="contact__btn" type="submit">チェックする</button>
+
+        </form>
+      </div>
+
+    </section>
+    <!-- マーキー -->
+    <div class="contact__marquee">
+      <div class="contact__marquee-inner">
+        <span>Code Latte</span>
+        <span>Code Latte</span>
+        <span>Code Latte</span>
+        <span>Code Latte</span>
+        <span>Code Latte</span>
+        <span>Code Latte</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer__inner wrapper">
+
+      <!-- 左：ロゴ＋QR -->
+      <div class="footer__left">
+        <p class="footer__logo">Code Latte</p>
+        <div class="footer__qr">
+          <img src="img/footer/qr.png" alt="QRコード">
+        </div>
+      </div>
+
+      <!-- 右：ナビ -->
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li><a href="#about">チームについて</a></li>
+          <li><a href="#works">実績紹介</a></li>
+          <li><a href="#skill">スキル</a></li>
+          <li><a href="#reasons">選ばれる理由</a></li>
+          <li><a href="#service">ご提供できるサービス</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <p class="footer__copy">&copy; 2026 Code Latte</p>
+
+  </footer>
+
+  <!-- page top -->
+  <a href="#" class="pagetop">
+    <span class="pagetop__text">TOP∧</span>
+    <div class="pagetop__circle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffff"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </div>
+  </a>
+
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

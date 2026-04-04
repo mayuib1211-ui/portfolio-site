@@ -1,0 +1,125 @@
+@use "variables" as v;
+
+$sp: 767px;
+$tab: 1110px;
+
+@mixin sp {
+  @media (max-width: $sp) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: #{$sp + 1}) and (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: #{$tab + 1}) {
+    @content;
+  }
+}
+
+// フレックス中央寄せ
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// セクション共通余白
+@mixin section-padding {
+  padding: 12rem 0;
+
+  @include sp {
+    padding: 6rem 0;
+  }
+}
+
+// セクションタイトルラベル
+@mixin section-title-label {
+  font-size: 1.4rem;
+  color: v.$color-accent;
+  letter-spacing: 0.1em;
+  text-indent: 0.5em;
+
+  @include sp {
+    font-size: 1.2rem;
+  }
+}
+
+// セクションタイトル
+@mixin section-title {
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid v.$color-border;
+  font-family: v.$font-ja-title;
+  font-weight: 500;
+
+  @include sp {
+    font-size: 2rem;
+  }
+}
+
+// サブセクションタイトル 
+@mixin section-sub-title {
+  padding-top: 8rem;
+  font-size: 2.4rem;
+  font-family: v.$font-ja-title;
+  font-weight: 500;
+  border-top: 1px solid v.$title-color-border;
+
+  @include sp {
+    font-size: 1.8rem; // ← 追加！好みのサイズで
+    padding-top: 4rem;
+  }
+}
+
+// ボタン
+@mixin btn-primary {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 1.4rem 7rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: v.$color-accent;
+  border: 1px solid v.$color-accent;
+  border-radius: 50px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: v.$color-accent;
+    color: v.$color-white;
+  }
+
+  @include sp {
+    font-size: 1.2rem;
+    padding: 1.4rem 5rem;
+  }
+}
+
+@mixin btn-secondary {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 1.4rem 7rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: v.$color-accent;
+  border: 1px solid v.$color-accent;
+  border-radius: 50px;
+  transition: all 0.3s;
+
+  &:hover {
+    // background-color: v.$color-white;
+    border: 1px solid rgb(0, 101, 114);
+    color: rgb(0, 101, 114);
+  }
+
+  @include sp {
+    font-size: 1.2rem;
+    padding: 1.4rem 5rem;
+  }
+}

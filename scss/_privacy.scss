@@ -1,0 +1,80 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+// ===========================
+// Policy
+// ===========================
+
+.policy {
+    padding: 12rem 0;
+
+    @include m.sp {
+        padding: 8rem 0;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-family: v.$font-ja-title;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid v.$color-border;
+        margin-bottom: 6rem;
+
+        @include m.sp {
+            font-size: 2rem;
+        }
+    }
+
+    &__block {
+        margin-bottom: 4rem;
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 1.6rem;
+        color: v.$color-main;
+
+        @include m.sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    &__list {
+        margin-top: 1.2rem;
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        li {
+            font-size: 1.4rem;
+            color: #555;
+            list-style: disc;
+        }
+    }
+
+    &__date {
+        font-size: 1.3rem;
+        color: #999;
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    &__back {
+        display: inline-block;
+        font-size: 1.4rem;
+        color: v.$color-accent;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

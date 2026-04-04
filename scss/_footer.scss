@@ -1,0 +1,80 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+// ===========================
+// Footer
+// ===========================
+
+.footer {
+    background: v.$color-accent;
+    color: #fff;
+    padding-bottom: 3.2rem;
+    position: relative;
+    z-index: 1;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+
+        @include m.sp {
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__logo {
+        font-family: v.$font-en;
+        font-size: 2.4rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+
+    &__qr {
+        width: 7rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+
+        @include m.sp {
+            text-align: left;
+        }
+
+        a {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.2s;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.4);
+        padding-top: 2.4rem;
+
+    }
+}

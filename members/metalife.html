@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaLifeサイト | Kou</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Shippori+Mincho:wght@400;500&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header__inner wrapper">
+            <div class="header__logo">
+                <a href="index.html">Code Latte</a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html#about">About</a></li>
+                    <li class="header__nav-item"><a href="index.html#skill">Skill</a></li>
+                    <li class="header__nav-item"><a href="index.html#works">Works</a></li>
+                    <li class="header__nav-item"><a href="index.html#reasons">Reasons</a></li>
+                    <li class="header__nav-item"><a href="index.html#service">Service</a></li>
+                    <li class="header__nav-item"><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="header__hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="drawer">
+        <nav class="drawer__nav">
+            <ul class="drawer__nav-list">
+                <li class="drawer__nav-item"><a href="index.html#about">About</a></li>
+                <li class="drawer__nav-item"><a href="index.html#skill">Skill</a></li>
+                <li class="drawer__nav-item"><a href="index.html#works">Works</a></li>
+                <li class="drawer__nav-item"><a href="index.html#reasons">Reasons</a></li>
+                <li class="drawer__nav-item"><a href="index.html#service">Service</a></li>
+                <li class="drawer__nav-item"><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="drawer-overlay"></div>
+
+    <main>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="member-contact">
+            <div class="wrapper">
+                <img src="img/contact/contact.png" alt="">
+                <p class="member-contact__text">ご覧いただきありがとうございました。<br>まずは、お気軽にご相談ください。</p>
+                <a href="index.html#contact" class="member-contact__btn">お問い合わせ</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner wrapper">
+            <div class="footer__left">
+                <p class="footer__logo">Code Latte</p>
+                <div class="footer__qr">
+                    <img src="img/footer/qr.png" alt="QRコード">
+                </div>
+            </div>
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li><a href="index.html#about">チームについて</a></li>
+                    <li><a href="index.html#works">実績紹介</a></li>
+                    <li><a href="index.html#skill">スキル</a></li>
+                    <li><a href="index.html#reasons">選ばれる理由</a></li>
+                    <li><a href="index.html#service">ご提供できるサービス</a></li>
+                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="footer__copy">&copy; 2026 Code Latte</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

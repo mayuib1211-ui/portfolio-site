@@ -1,0 +1,350 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+// ===== ヘッダー =====
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 7.2rem;
+    }
+
+    &__logo {
+        font-family: v.$font-en;
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        color: v.$color-header-text;
+    }
+
+    &__nav {
+        @include m.sp {
+            display: none;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    &__nav-item a {
+        font-family: v.$font-en;
+        font-size: 1.4rem;
+        color: v.$color-header-muted;
+        letter-spacing: 0.06em;
+        transition: color 0.2s;
+
+        &:hover {
+            color: v.$color-sub-en;
+        }
+    }
+
+    // ハンバーガー
+    &__hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 0.6rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.4rem;
+        z-index: 200;
+
+        @include m.sp {
+            display: flex;
+        }
+
+        span {
+            display: block;
+            width: 2.4rem;
+            height: 0.2rem;
+            background: v.$color-header-text;
+            border-radius: 2px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        // open状態
+        &.is-open {
+            span:nth-child(1) {
+                transform: translateY(0.8rem) rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: translateY(-0.8rem) rotate(-45deg);
+            }
+        }
+    }
+}
+
+// ===== ドロワー =====
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background: v.$color-white;
+    z-index: 150;
+    transition: right 0.3s ease;
+    padding: 10rem 3.2rem 3.2rem;
+
+    &.is-open {
+        right: 0;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    &__nav-item a {
+        font-family: v.$font-en;
+        font-size: 1.8rem;
+        color: v.$color-header-text;
+        letter-spacing: 0.08em;
+    }
+}
+
+.drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 140;
+
+    &.is-open {
+        display: block;
+    }
+}
+
+// ===== FV =====
+
+.fv-blob {
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+
+    img {
+        width: 100%;
+        transform: scale(1.3);
+        transform-origin: top center;
+    }
+}
+
+.fv {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 7.2rem;
+    overflow: visible;
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: calc(100vh - 7.2rem);
+        gap: 2rem;
+
+
+        @include m.sp {
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        // border: 1px solid red;
+    }
+
+    &__sub {
+        font-family: v.$font-en;
+        font-size: v.$fs-sub-en;
+        color: v.$color-sub-en;
+        letter-spacing: 0.16em;
+        margin-bottom: 0.8rem;
+    }
+
+    &__title {
+        font-family: v.$font-en;
+        font-size: 5.6rem;
+        font-weight: 500;
+        color: v.$color-header-text;
+        letter-spacing: 0.2em;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+
+        @include m.sp {
+            font-size: 4rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        color: v.$color-main;
+        line-height: 1.9;
+        letter-spacing: 0.03em;
+        margin-bottom: 4rem;
+        font-family: v.$font-ja-title;
+        font-weight: 500;
+        // border: 1px solid red;
+    }
+
+    &__btn {
+        display: inline-block;
+        background: v.$color-btn-bg;
+        color: v.$color-white;
+        font-family: v.$font-en;
+        font-size: 1.4rem;
+        padding: 1.2rem 3.2rem;
+        border-radius: 100px;
+        letter-spacing: 0.1em;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        @include m.sp {
+            font-size: 1.2rem;
+            padding: 1rem 3.2rem;
+        }
+    }
+
+    &__scroll {
+        position: relative;
+        gap: 0.8rem;
+        margin-top: 4rem;
+    }
+
+    &__scroll-text {
+        font-family: v.$font-en;
+        font-size: 1.2rem;
+        letter-spacing: 0.2em;
+        color: gray;
+        writing-mode: vertical-rl;
+    }
+
+    &__scroll-border {
+        position: relative;
+        top: 10px;
+        width: 20px;
+        height: 4rem;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 4rem;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: gray;
+            animation: scrollbar 2.0s ease-in-out infinite;
+            margin: auto;
+        }
+    }
+
+    &__image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include m.sp {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__image-list {
+        position: relative;
+        width: 165%;
+
+
+        li {
+            width: 160%;
+            transform: translate(-14rem, -2rem);
+
+            @include m.sp {
+                width: 120%;
+                transform: translate(-3rem, -2rem);
+            }
+        }
+
+        li:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-14rem, -8rem);
+
+            @include m.sp {
+                width: 120%;
+                transform: translate(-3rem, -2rem);
+            }
+        }
+    }
+
+}
+
+.fadein {
+    li {
+        opacity: 0;
+        animation: fade 10s ease infinite;
+        will-change: opacity;
+    }
+
+    li:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    li:nth-child(2) {
+        animation-delay: 5s;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.9;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

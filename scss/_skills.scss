@@ -1,0 +1,154 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.skill {
+    @include m.section-padding;
+    position: relative; 
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%) scale(1.2);
+        width: 100%;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    // wrapperの中身が背景の下に潜らないように
+    &>.wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__label {
+        @include m.section-title-label;
+    }
+
+    &__title {
+        @include m.section-title;
+    }
+
+    &__intro {
+        padding-top: 8rem;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.4rem;
+        margin-top: 8rem;
+
+        @include m.sp {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @include m.tab {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+    }
+
+    &__card {
+        width: 80%;
+        background: #fff;
+        padding: 4rem 3.2rem;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        border-top: 3px solid transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0 auto;
+        transition: transform 0.3s ease;
+
+        &--frontend {
+            border-top-color: #A8D8C8; // ミントグリーン
+        }
+
+        &--backend {
+            border-top-color: #85B7EB; // ブルー
+        }
+
+        &--design {
+            border-top-color: #F0A8B0; // ピンク
+        }
+
+        @include m.tab {
+            width: 95%;
+        }
+
+        @include m.sp {
+            width: 95%;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    &__icon {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .skill__card--frontend & {
+            background: rgba(168, 216, 200, 0.2);
+            color: #6DB8A0;
+        }
+
+        .skill__card--backend & {
+            background: rgba(133, 183, 235, 0.2);
+            color: #5A9FD4;
+        }
+
+        .skill__card--design & {
+            background: rgba(240, 168, 176, 0.2);
+            color: #D47A85;
+        }
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        flex: 1; // タグを下に揃えるため
+    }
+
+    &__tech {
+        margin-top: auto;
+    }
+
+    &__tech-label {
+        font-size: 1.2rem;
+        color: #5e5e5e;
+        margin-bottom: 1rem;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__tag {
+        font-size: 1.2rem;
+        padding: 0.4rem 1.2rem;
+        // border-radius: 10rem;
+        border: 1px solid #ddd;
+        color: #555;
+        background: #fafafa;
+    }
+}

@@ -1,0 +1,188 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+// ===========================
+// Contact
+// ===========================
+
+.contact {
+    @include m.section-padding;
+    padding-bottom: 0;
+    position: relative;
+    // overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        transform: translateX(-50%) scale(1.1);
+        width: 100%;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    &>.wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__label {
+        @include m.section-title-label;
+    }
+
+    &__title {
+        @include m.section-title;
+    }
+
+    &__intro {
+        margin-top: 4rem;
+    }
+
+    &__form {
+        margin-top: 8rem;
+        max-width: 60rem;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @include m.sp {
+            margin-top: 5rem;
+        }
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    &__label-field {
+        font-size: 1.5rem;
+        color: v.$color-main;
+    }
+
+    &__required {
+        color: #7AAEC8;
+        margin-left: 0.4rem;
+    }
+
+    &__line {
+        width: 100%;
+        height: 1px;
+        background: v.$color-border;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 1.2rem 1.6rem;
+        border: 1px solid v.$title-color-border;
+        font-size: 1.4rem;
+        font-family: v.$font-ja-body;
+        outline: none;
+        transition: border-color 0.2s;
+        background: #fff;
+
+        &:focus {
+            border-color: #7AAEC8;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        padding: 1.2rem 1.6rem;
+        border: 1px solid v.$title-color-border;
+        font-size: 1.4rem;
+        font-family: v.$font-ja-body;
+        outline: none;
+        resize: vertical;
+        transition: border-color 0.2s;
+        background: #fff;
+
+        &:focus {
+            border-color: #7AAEC8;
+        }
+    }
+
+    &__checks {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            width: 1.6rem;
+            height: 1.6rem;
+            accent-color: #7AAEC8;
+            cursor: pointer;
+        }
+    }
+
+    &__privacy {
+        label {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+
+            a {
+                border-bottom: 1px solid v.$title-color-border;
+            }
+        }
+
+        input[type="checkbox"] {
+            width: 1.6rem;
+            height: 1.6rem;
+            accent-color: #7AAEC8;
+            cursor: pointer;
+        }
+    }
+
+    &__btn {
+        @include m.btn-primary;
+    }
+
+    &__marquee {
+        padding: 0;
+        margin-top: 20rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &-inner {
+            display: flex;
+            gap: 4rem;
+            white-space: nowrap;
+            animation: marquee 70s linear infinite;
+            width: max-content;
+        }
+
+        span {
+            font-family: v.$font-en;
+            font-size: 25rem;
+            font-weight: 600;
+            color: transparent;
+            background: linear-gradient(90deg, #90C6E0, #A0D4D2, #B3DBEF, #A1D0E8, #8FC5E1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            letter-spacing: 0.1em;
+            flex-shrink: 0;
+            line-height: 0.75;
+
+
+            @include m.sp {
+                font-size: 16rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,248 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.about {
+    position: relative;
+    padding-block: 8rem 0;
+
+    @include m.sp {
+        padding-block: 0 0;
+
+    }
+
+    &__bg {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translateX(-50%) scale(1.4);
+        width: 100%;
+        pointer-events: none;
+        z-index: -100;
+    }
+
+
+
+    &__label {
+        @include m.section-title-label;
+    }
+
+    &__title {
+        @include m.section-title;
+    }
+
+    // チームについて
+    &__team-inner {
+        display: flex;
+        justify-content: center;
+        gap: 8rem;
+        align-items: center;
+        margin-block: 16rem;
+
+        @include m.sp {
+            flex-direction: column;
+            margin-block: 12rem;
+        }
+    }
+
+    &__logo {
+        width: 25rem;
+        flex-shrink: 0;
+    }
+
+    &__team-text {
+        width: 70rem;
+
+        @include m.sp {
+            width: 95%;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__team-name {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__team-name-en {
+        font-size: 1.2rem;
+        color: #888;
+        margin-bottom: 2rem;
+    }
+
+    // 大切にしていること
+    &__values {
+        padding-bottom: 16rem;
+    }
+
+    &__values-title {
+        @include m.section-sub-title;
+        margin-bottom: 12rem;
+
+        @include m.sp {
+            margin-bottom: 8rem;
+
+        }
+
+    }
+
+    &__values-inner {
+        display: flex;
+        justify-content: center;
+        gap: 8rem;
+        align-items: center;
+
+        @include m.sp {
+            flex-direction: column;
+        }
+    }
+
+
+    &__values-img {
+        width: 25rem;
+        flex-shrink: 0;
+    }
+
+    &__values-text {
+        width: 70rem;
+
+
+        @include m.sp {
+            width: 95%;
+            font-size: 1.5rem;
+        }
+    }
+
+    .text-padding {
+        display: block;
+        padding-bottom: 1em;
+    }
+
+    // メンバー
+
+    &__members {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__members-title {
+        @include m.section-sub-title;
+        margin-bottom: 8rem;
+    }
+
+    &__members-list {
+
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        gap: 5rem 4rem;
+        margin-bottom: 12rem;
+        list-style: none;
+
+        @include m.tab {
+            width: 80%;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        @include m.sp {
+            grid-template-columns: 1fr;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+
+    &__member-card {
+        position: relative;
+        z-index: 1;
+        padding: 2rem 3rem 2rem 2rem;
+        isolation: auto;
+        // box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.171);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__member-inner {
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+
+    &__member-name {
+        position: absolute;
+        bottom: -1rem;
+        right: -1rem;
+        background: #e0f1fa;
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: 0.8rem 4.8rem;
+
+        @include m.sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__member-role {
+        font-size: 1.8rem;
+        padding: 1rem 0 0 2rem;
+        margin-block: 1rem;
+        font-weight: 500;
+        color: v.$color-accent;
+
+
+        @include m.sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__member-skills {
+        padding: 1rem 2rem 1rem 2rem;
+
+        @include m.sp {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__btn {
+        @include m.btn-primary;
+
+        @include m.sp {
+            margin-top: 8rem;
+        }
+    }
+
+    .marquee {
+        // overflow: hidden;
+        white-space: nowrap;
+        padding-top: 8rem;
+
+        &__inner {
+            display: inline-flex;
+            gap: 4rem;
+            animation: marquee 30s linear infinite;
+            width: max-content;
+        }
+
+        span {
+            font-family: v.$font-en;
+            font-size: 25rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            background: linear-gradient(90deg, #90C6E0, #A0D4D2, #B3DBEF, #A1D0E8, #8FC5E1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 50%;
+
+            @include m.sp {
+                font-size: 16rem;
+            }
+        }
+    }
+
+
+}
