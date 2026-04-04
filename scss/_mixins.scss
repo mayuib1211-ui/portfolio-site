@@ -92,6 +92,7 @@ $tab: 1110px;
   &:hover {
     background-color: v.$color-accent;
     color: v.$color-white;
+    transform: translateY(3px);
   }
 
   @include sp {
@@ -116,6 +117,7 @@ $tab: 1110px;
     // background-color: v.$color-white;
     border: 1px solid rgb(0, 101, 114);
     color: rgb(0, 101, 114);
+    transform: translateY(3px);
   }
 
   @include sp {

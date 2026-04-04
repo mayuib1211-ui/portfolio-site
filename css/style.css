@@ -621,6 +621,7 @@ li {
 .about__btn:hover {
   background-color: #004568;
   color: #ffffff;
+  transform: translateY(3px);
 }
 @media (max-width: 767px) {
   .about__btn {
@@ -1492,6 +1493,7 @@ li {
 .modal__btn:hover {
   border: 1px solid rgb(0, 101, 114);
   color: rgb(0, 101, 114);
+  transform: translateY(3px);
 }
 @media (max-width: 767px) {
   .modal__btn {
@@ -1673,6 +1675,7 @@ li {
 .contact__btn:hover {
   background-color: #004568;
   color: #ffffff;
+  transform: translateY(3px);
 }
 @media (max-width: 767px) {
   .contact__btn {
@@ -2001,6 +2004,7 @@ li {
 .member-contact__btn:hover {
   border: 1px solid rgb(0, 101, 114);
   color: rgb(0, 101, 114);
+  transform: translateY(3px);
 }
 @media (max-width: 767px) {
   .member-contact__btn {
@@ -2326,6 +2330,7 @@ li {
 .project-gallery__btn:hover {
   background-color: #004568;
   color: #ffffff;
+  transform: translateY(3px);
 }
 @media (max-width: 767px) {
   .project-gallery__btn {
