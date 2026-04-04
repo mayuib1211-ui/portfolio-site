@@ -1,6 +1,5 @@
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 body {
@@ -1360,14 +1359,18 @@ li {
   background: none;
   border: 1px solid #ddd;
   border-radius: 50%;
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: opacity 0.2s;
   color: #555;
+}
+.modal__close i {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 .modal__close:hover {
   opacity: 0.7;
@@ -1380,8 +1383,8 @@ li {
   color: #004568;
 }
 .modal__heading i {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 .modal__title {
   font-size: 2.4rem;
@@ -1518,6 +1521,7 @@ li {
 .contact {
   padding-bottom: 0;
   position: relative;
+  overflow: hidden;
 }
 .contact__bg {
   position: absolute;

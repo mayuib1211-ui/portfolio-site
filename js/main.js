@@ -57,3 +57,7 @@ document.querySelectorAll('.modal__close').forEach(btn => {
 });
 
 modalOverlay.addEventListener('click', closeModal); // ← 変更
+
+document.querySelectorAll('.modal__btn').forEach(btn => {
+  btn.addEventListener('click', closeModal);
+});
