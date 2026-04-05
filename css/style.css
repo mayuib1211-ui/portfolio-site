@@ -1695,6 +1695,10 @@ main {
   padding: 0;
   margin-top: 20rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
 }
 .contact__marquee-inner {
   display: flex;
