@@ -216,9 +216,12 @@
     }
 
     .marquee {
-        // overflow: hidden;
+
         white-space: nowrap;
         padding-top: 8rem;
+        overflow: hidden;
+        width: 100vw;
+        margin-inline: calc(50% - 50vw);
 
         &__inner {
             display: inline-flex;
