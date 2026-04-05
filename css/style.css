@@ -1758,6 +1758,11 @@ main {
   width: 90%;
   margin-left: auto;
 }
+@media (max-width: 767px) {
+  .members-wrap {
+    margin-inline: auto;
+  }
+}
 
 .member-block {
   padding-block: 6rem;

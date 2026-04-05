@@ -35,6 +35,10 @@
 .members-wrap {
     width: 90%;
     margin-left: auto;
+
+    @include m.sp {
+        margin-inline: auto;
+    }
 }
 
 .member-block {
