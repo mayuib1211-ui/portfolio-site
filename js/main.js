@@ -1,6 +1,20 @@
 // 初期化
 lucide.createIcons();
 
+// スムーススクロール
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    const headerHeight = document.querySelector('.header')?.offsetHeight ?? 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
 const pagetop = document.querySelector('.pagetop');
 window.addEventListener('scroll', () => {
   pagetop.style.opacity = window.scrollY > 300 ? '1' : '0';
