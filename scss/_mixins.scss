@@ -71,7 +71,7 @@ $tab: 1110px;
   border-top: 1px solid v.$title-color-border;
 
   @include sp {
-    font-size: 1.8rem; // ← 追加！好みのサイズで
+    font-size: 1.8rem; 
     padding-top: 4rem;
   }
 }
