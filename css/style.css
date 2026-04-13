@@ -464,7 +464,6 @@ main {
   font-size: 1.4rem;
   color: #004568;
   letter-spacing: 0.1em;
-  text-indent: 0.5em;
 }
 @media (max-width: 767px) {
   .about__label {
@@ -636,6 +635,12 @@ main {
      object-position: center 20%;
   display: block;
 }
+@media (max-width: 767px) {
+  .about__member-img {
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+}
 .about__member-name {
   position: absolute;
   bottom: -1rem;
@@ -759,7 +764,6 @@ main {
   font-size: 1.4rem;
   color: #004568;
   letter-spacing: 0.1em;
-  text-indent: 0.5em;
 }
 @media (max-width: 767px) {
   .skill__label {
@@ -902,7 +906,6 @@ main {
   font-size: 1.4rem;
   color: #004568;
   letter-spacing: 0.1em;
-  text-indent: 0.5em;
 }
 @media (max-width: 767px) {
   .works__label {
@@ -1107,7 +1110,6 @@ main {
   font-size: 1.4rem;
   color: #004568;
   letter-spacing: 0.1em;
-  text-indent: 0.5em;
 }
 @media (max-width: 767px) {
   .reasons__label {
@@ -1244,7 +1246,6 @@ main {
   font-size: 1.4rem;
   color: #004568;
   letter-spacing: 0.1em;
-  text-indent: 0.5em;
 }
 @media (max-width: 767px) {
   .service__label {
@@ -1625,7 +1626,6 @@ main {
   font-size: 1.4rem;
   color: #004568;
   letter-spacing: 0.1em;
-  text-indent: 0.5em;
 }
 @media (max-width: 767px) {
   .contact__label {
@@ -1851,7 +1851,6 @@ main {
   font-size: 1.4rem;
   color: #004568;
   letter-spacing: 0.1em;
-  text-indent: 0.5em;
 }
 @media (max-width: 767px) {
   .member-profile__label {
