@@ -56,6 +56,10 @@
             margin-top: 6rem;
             transform: rotate(-16deg);
 
+            &.is-visible {
+                transform: rotate(-16deg);
+            }
+
             &:hover {
                 transform: rotate(-16deg) scale(1.02) translateY(-20px);
             }
@@ -65,6 +69,10 @@
             margin-top: 0;
             transform: rotate(-6deg);
 
+            &.is-visible {
+                transform: rotate(-6deg);
+            }
+
             &:hover {
                 transform: rotate(-6deg) scale(1.02) translateY(-20px);
             }
@@ -72,6 +80,10 @@
 
         &--3 {
             transform: rotate(5deg);
+
+            &.is-visible {
+                transform: rotate(5deg);
+            }
 
             &:hover {
                 transform: rotate(6deg) scale(1.02) translateY(-20px);
@@ -81,6 +93,10 @@
         &--4 {
             margin-top: 5rem;
             transform: rotate(16deg);
+
+            &.is-visible {
+                transform: rotate(16deg);
+            }
 
             &:hover {
                 transform: rotate(16deg) scale(1.02) translateY(-20px);
@@ -96,8 +112,12 @@
                 margin-top: 0;
                 transform: rotate(0deg);
 
+                &.is-visible {
+                    transform: rotate(0deg);
+                }
+
                 &:hover {
-                    transform: rotate(10deg) scale(1.02) translateY(-20px)
+                    transform: rotate(0deg) scale(1.01) translateY(-20px)
                 }
             }
         }
@@ -111,6 +131,10 @@
                 margin-top: 0;
                 transform: rotate(0deg);
 
+                &.is-visible {
+                    transform: rotate(0deg);
+                }
+
                 &:hover {
                     transform: rotate(0deg) scale(1) translateY(-10px)
                 }
@@ -118,18 +142,20 @@
         }
     }
 
-    &__num {
-        font-family: 'Zen Antique Soft', serif;
-        font-size: 4rem;
-        font-weight: 400;
-        color: v.$color-accent;
-        line-height: 1;
-    }
+    // &__num {
+    //     font-family: 'Zen Antique Soft', serif;
+    //     font-size: 4rem;
+    //     font-weight: 400;
+    //     color: v.$color-accent;
+    //     line-height: 1;
+    // }
 
     &__name {
-        font-size: 1.8rem;
+        font-size: 2.1rem;
         font-weight: 500;
         color: v.$color-accent;
+        text-align: center;
+        padding-top: 1rem;
     }
 
     &__img {

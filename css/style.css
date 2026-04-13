@@ -89,6 +89,57 @@ main {
   border-radius: 50%;
 }
 
+.about__label .char,
+.about__title .char,
+.skill__label .char,
+.skill__title .char,
+.works__label .char,
+.works__title .char,
+.reasons__label .char,
+.reasons__title .char,
+.service__label .char,
+.service__title .char,
+.contact__label .char,
+.contact__title .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about__label .char.in,
+.about__title .char.in,
+.skill__label .char.in,
+.skill__title .char.in,
+.works__label .char.in,
+.works__title .char.in,
+.reasons__label .char.in,
+.reasons__title .char.in,
+.service__label .char.in,
+.service__title .char.in,
+.contact__label .char.in,
+.contact__title .char.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fadein.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill__card,
+.reasons__card,
+.service__card,
+.works__item {
+  will-change: opacity, transform;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -362,15 +413,15 @@ main {
   }
 }
 
-.fadein li {
+.fv__image-list.fadein li {
   opacity: 0;
   animation: fade 10s ease infinite;
   will-change: opacity;
 }
-.fadein li:nth-child(1) {
+.fv__image-list.fadein li:nth-child(1) {
   animation-delay: 0s;
 }
-.fadein li:nth-child(2) {
+.fv__image-list.fadein li:nth-child(2) {
   animation-delay: 5s;
 }
 
@@ -575,6 +626,15 @@ main {
 .about__member-inner {
   position: relative;
   margin-bottom: 2rem;
+}
+.about__member-img {
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 20%;
+     object-position: center 20%;
+  display: block;
 }
 .about__member-name {
   position: absolute;
@@ -1240,11 +1300,17 @@ main {
   margin-top: 6rem;
   transform: rotate(-16deg);
 }
+.service__card--1.is-visible {
+  transform: rotate(-16deg);
+}
 .service__card--1:hover {
   transform: rotate(-16deg) scale(1.02) translateY(-20px);
 }
 .service__card--2 {
   margin-top: 0;
+  transform: rotate(-6deg);
+}
+.service__card--2.is-visible {
   transform: rotate(-6deg);
 }
 .service__card--2:hover {
@@ -1253,11 +1319,17 @@ main {
 .service__card--3 {
   transform: rotate(5deg);
 }
+.service__card--3.is-visible {
+  transform: rotate(5deg);
+}
 .service__card--3:hover {
   transform: rotate(6deg) scale(1.02) translateY(-20px);
 }
 .service__card--4 {
   margin-top: 5rem;
+  transform: rotate(16deg);
+}
+.service__card--4.is-visible {
   transform: rotate(16deg);
 }
 .service__card--4:hover {
@@ -1268,8 +1340,11 @@ main {
     margin-top: 0;
     transform: rotate(0deg);
   }
+  .service__card--1.is-visible, .service__card--2.is-visible, .service__card--3.is-visible, .service__card--4.is-visible {
+    transform: rotate(0deg);
+  }
   .service__card--1:hover, .service__card--2:hover, .service__card--3:hover, .service__card--4:hover {
-    transform: rotate(10deg) scale(1.02) translateY(-20px);
+    transform: rotate(0deg) scale(1.01) translateY(-20px);
   }
 }
 @media (max-width: 767px) {
@@ -1277,21 +1352,19 @@ main {
     margin-top: 0;
     transform: rotate(0deg);
   }
+  .service__card--1.is-visible, .service__card--2.is-visible, .service__card--3.is-visible, .service__card--4.is-visible {
+    transform: rotate(0deg);
+  }
   .service__card--1:hover, .service__card--2:hover, .service__card--3:hover, .service__card--4:hover {
     transform: rotate(0deg) scale(1) translateY(-10px);
   }
 }
-.service__num {
-  font-family: "Zen Antique Soft", serif;
-  font-size: 4rem;
-  font-weight: 400;
-  color: #004568;
-  line-height: 1;
-}
 .service__name {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-weight: 500;
   color: #004568;
+  text-align: center;
+  padding-top: 1rem;
 }
 .service__img {
   width: 100%;

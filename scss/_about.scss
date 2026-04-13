@@ -171,6 +171,14 @@
         margin-bottom: 2rem;
     }
 
+    &__member-img {
+        width: 100%;
+        height: 20rem; // お好みで調整
+        object-fit: cover;
+        object-position: center 20%; // 顔が上にある場合は top が◎
+        display: block;
+    }
+
 
     &__member-name {
         position: absolute;

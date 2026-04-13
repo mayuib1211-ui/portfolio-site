@@ -75,3 +75,79 @@ modalOverlay.addEventListener('click', closeModal); // ← 変更
 document.querySelectorAll('.modal__btn').forEach(btn => {
   btn.addEventListener('click', closeModal);
 });
+
+
+// セクションタイトルドロップイン
+const LABEL_SELECTORS = [
+  { label: '.about__label', title: '.about__title' },
+  { label: '.skill__label', title: '.skill__title' },
+  { label: '.works__label', title: '.works__title' },
+  { label: '.reasons__label', title: '.reasons__title' },
+  { label: '.service__label', title: '.service__title' },
+  { label: '.contact__label', title: '.contact__title' },
+];
+
+function splitChars(el) {
+  el.innerHTML = [...el.textContent]
+    .map(ch =>
+      `<span class="char">${ch === ' ' ? '&nbsp;' : ch}</span>`
+    ).join('');
+}
+
+function fireDropIn(labelEl, titleEl) {
+  const labelChars = labelEl.querySelectorAll('.char');
+  const titleChars = titleEl.querySelectorAll('.char');
+
+  labelChars.forEach((c, i) => {
+    setTimeout(() => c.classList.add('in'), i * 40);
+  });
+
+  const offset = labelChars.length * 40 + 200;
+  titleChars.forEach((c, i) => {
+    setTimeout(() => c.classList.add('in'), offset + i * 55);
+  });
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const { labelEl, titleEl } = entry.target._dropIn;
+        fireDropIn(labelEl, titleEl);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+LABEL_SELECTORS.forEach(({ label, title }) => {
+  const labelEl = document.querySelector(label);
+  const titleEl = document.querySelector(title);
+  if (!labelEl || !titleEl) return;
+
+  splitChars(labelEl);
+  splitChars(titleEl);
+
+  const section = labelEl.closest('section') ?? labelEl;
+  section._dropIn = { labelEl, titleEl };
+  observer.observe(section);
+});
+
+// フェードイン
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+document.querySelectorAll('.fadein').forEach(el => {
+  fadeObserver.observe(el);
+});
+

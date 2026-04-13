@@ -103,3 +103,61 @@ main {
         border-radius: 50%;
     }
 }
+
+// セクションタイトルドロップイン
+.about__label .char,
+.about__title .char,
+.skill__label .char,
+.skill__title .char,
+.works__label .char,
+.works__title .char,
+.reasons__label .char,
+.reasons__title .char,
+.service__label .char,
+.service__title .char,
+.contact__label .char,
+.contact__title .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-22px);
+    transition:
+        opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about__label .char.in,
+.about__title .char.in,
+.skill__label .char.in,
+.skill__title .char.in,
+.works__label .char.in,
+.works__title .char.in,
+.reasons__label .char.in,
+.reasons__title .char.in,
+.service__label .char.in,
+.service__title .char.in,
+.contact__label .char.in,
+.contact__title .char.in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+// フェードイン
+.fadein {
+    opacity: 0;
+    transform: translateY(20px); // 30px → 20px（動きを小さく）
+    transition:
+        opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), // 0.7s → 1s
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); // 0.7s → 1s
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill__card,
+.reasons__card,
+.service__card,
+.works__item {
+    will-change: opacity, transform;
+}
