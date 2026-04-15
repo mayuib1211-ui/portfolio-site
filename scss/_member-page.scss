@@ -244,20 +244,6 @@
     background: linear-gradient(180deg, #E6F8FF 0%, #CEE6FF 100%);
     text-align: center;
 
-    &__title {
-        font-family: v.$font-en;
-        font-size: 6rem;
-        font-weight: 500;
-        color: transparent;
-        -webkit-text-stroke: 1px #004568;
-        letter-spacing: 0.1em;
-        margin-bottom: 2rem;
-
-        @include m.sp {
-            font-size: 4rem;
-        }
-    }
-
     &__text {
         font-size: 1.5rem;
         line-height: 1.8;

@@ -264,11 +264,6 @@
         }
     }
 
-    .project-list {
-        &__grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
 }
 
 @include m.tab {
@@ -276,12 +271,6 @@
         &__row {
             grid-template-columns: 12rem 1fr;
             gap: 4rem;
-        }
-    }
-
-    .project-list {
-        &__grid {
-            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

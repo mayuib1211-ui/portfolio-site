@@ -2059,20 +2059,6 @@ main {
   background: linear-gradient(180deg, #E6F8FF 0%, #CEE6FF 100%);
   text-align: center;
 }
-.member-contact__title {
-  font-family: "Outfit", sans-serif;
-  font-size: 6rem;
-  font-weight: 500;
-  color: transparent;
-  -webkit-text-stroke: 1px #004568;
-  letter-spacing: 0.1em;
-  margin-bottom: 2rem;
-}
-@media (max-width: 767px) {
-  .member-contact__title {
-    font-size: 4rem;
-  }
-}
 .member-contact__text {
   font-size: 1.5rem;
   line-height: 1.8;
@@ -2506,16 +2492,10 @@ main {
     grid-template-columns: 1fr;
     gap: 1.6rem;
   }
-  .project-list__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 @media (min-width: 768px) and (max-width: 1110px) {
   .project-detail__row {
     grid-template-columns: 12rem 1fr;
     gap: 4rem;
-  }
-  .project-list__grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
