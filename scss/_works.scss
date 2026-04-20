@@ -45,10 +45,19 @@
 
     // 通常リスト
     &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+        width: 95%;
+        margin-inline: auto;
+
+        @include m.tab {
+            grid-template-columns: 1fr;
+        }
+
+        @include m.sp {
+            grid-template-columns: 1fr;
+        }
 
 
         // バナーだけ上書き
@@ -72,10 +81,10 @@
 
     // 各アイテム
     &__item {
-        width: 95%;
+        width: 100%;
         display: flex;
-        align-items: center;
-        gap: 3.2rem;
+        flex-direction: column;
+        gap: 1.6rem;
         padding: 2.4rem;
         background: #fff;
         border-radius: 1rem;
@@ -84,11 +93,6 @@
 
         &:hover {
             transform: translateY(-2px);
-        }
-
-        @include m.sp {
-            flex-direction: column;
-            gap: 2rem;
         }
     }
 
@@ -106,7 +110,7 @@
     }
 
     &__name {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 500;
         color: v.$color-main;
     }
@@ -114,6 +118,7 @@
     &__date {
         font-size: 1.3rem;
         color: v.$color-border;
+        margin-top: 1rem;
     }
 
     // タグ
@@ -143,6 +148,7 @@
     &__desc {
         font-size: 1.4rem;
         line-height: 1.8;
+        margin-top: 2rem;
     }
 
     &__link {
@@ -160,21 +166,13 @@
 
     // サムネイル
     &__thumb {
-        width: 24rem;
-        flex-shrink: 0;
+        width: 100%;
         position: relative;
-        background: #f0f0f0;
-        aspect-ratio: 16 / 10;
         overflow: hidden;
-
-        @include m.sp {
-            width: 100%;
-        }
 
         img {
             width: 100%;
-            height: 100%;
-            // object-fit: cover;
+            object-fit: contain;
         }
     }
 
