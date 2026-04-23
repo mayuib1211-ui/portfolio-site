@@ -388,34 +388,46 @@ main {
 }
 .fv__image-list {
   position: relative;
-  width: 165%;
+  width: 135%;
 }
 .fv__image-list li {
-  width: 160%;
-  transform: translate(-14rem, -2rem);
+  width: 135%;
+  transform: translate(-9rem, -2rem);
 }
 @media (max-width: 767px) {
   .fv__image-list li {
-    width: 120%;
-    transform: translate(-3rem, -2rem);
+    width: 100%;
+    transform: translate(0rem, 1rem);
   }
 }
 .fv__image-list li:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(-14rem, -8rem);
+  transform: translate(-9rem, -5rem);
 }
 @media (max-width: 767px) {
   .fv__image-list li:nth-child(2) {
-    width: 120%;
-    transform: translate(-3rem, -2rem);
+    width: 100%;
+    transform: translate(0rem, 0rem);
+  }
+}
+.fv__image-list li:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-9rem, -2rem);
+}
+@media (max-width: 767px) {
+  .fv__image-list li:nth-child(3) {
+    width: 100%;
+    transform: translate(0rem, 1rem);
   }
 }
 
 .fv__image-list.fadein li {
   opacity: 0;
-  animation: fade 10s ease infinite;
+  animation: fade 15s ease infinite;
   will-change: opacity;
 }
 .fv__image-list.fadein li:nth-child(1) {
@@ -424,18 +436,21 @@ main {
 .fv__image-list.fadein li:nth-child(2) {
   animation-delay: 5s;
 }
+.fv__image-list.fadein li:nth-child(3) {
+  animation-delay: 10s;
+}
 
 @keyframes fade {
   0% {
     opacity: 0;
   }
-  15% {
-    opacity: 0.9;
-  }
-  35% {
+  5% {
     opacity: 1;
   }
-  50% {
+  28% {
+    opacity: 1;
+  }
+  33% {
     opacity: 0;
   }
   100% {
