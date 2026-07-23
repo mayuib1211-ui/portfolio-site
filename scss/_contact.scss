@@ -190,4 +190,27 @@
         }
     }
 
+    &__error {
+        display: none;
+        color: #d16b6b;
+        font-size: 1.3rem;
+        margin-top: 0.4rem;
+
+        &.is-visible {
+            display: block;
+        }
+    }
+
+    &__success {
+        display: none;
+        color: #4a9d7c;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 1.6rem;
+
+        &.is-visible {
+            display: block;
+        }
+    }
+
 }

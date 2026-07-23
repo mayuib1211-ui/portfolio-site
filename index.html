@@ -185,7 +185,7 @@
             </li>
             <li class="about__member-card fadein" style="transition-delay: 0.6s">
               <div class="about__member-inner">
-                <img class="about__member-img" src="img/about/kou.jpg" alt="まゆみ">
+                <img class="about__member-img" src="img/members/mayumi/mayumi.png" alt="まゆみ">
                 <p class="about__member-name">まゆみ</p>
               </div>
               <div class="about__member-desc">
@@ -803,12 +803,13 @@
             <p class="contact__label-field">お問い合わせ種別<span class="contact__required">*</span></p>
             <div class="contact__line"></div>
             <ul class="contact__checks">
-              <li><label><input type="checkbox" name="type" value="web" required> Webサイト制作（コーポレートサイトなど）</label></li>
+              <li><label><input type="checkbox" name="type" value="web"> Webサイト制作（コーポレートサイトなど）</label></li>
               <li><label><input type="checkbox" name="type" value="lp"> LP制作</label></li>
               <li><label><input type="checkbox" name="type" value="app"> アプリ開発</label></li>
               <li><label><input type="checkbox" name="type" value="design"> デザインのみ（バナー・UIなど）</label></li>
               <li><label><input type="checkbox" name="type" value="consult"> 相談したい（未定）</label></li>
             </ul>
+            <p class="contact__error" data-error-for="type">お問い合わせ種別を1つ以上選択してください</p>
           </div>
 
           <!-- お名前 -->
@@ -834,11 +835,12 @@
             <p class="contact__label-field">予算<span class="contact__required">*</span></p>
             <div class="contact__line"></div>
             <ul class="contact__checks">
-              <li><label><input type="checkbox" name="budget" value="under10" required> 〜10万円</label></li>
+              <li><label><input type="checkbox" name="budget" value="under10"> 〜10万円</label></li>
               <li><label><input type="checkbox" name="budget" value="10to30"> 10〜30万円</label></li>
               <li><label><input type="checkbox" name="budget" value="over30"> 30万円以上</label></li>
               <li><label><input type="checkbox" name="budget" value="undecided"> 未定</label></li>
             </ul>
+            <p class="contact__error" data-error-for="budget">予算を1つ以上選択してください</p>
           </div>
 
           <!-- 納期 -->
@@ -846,11 +848,12 @@
             <p class="contact__label-field">納期<span class="contact__required">*</span></p>
             <div class="contact__line"></div>
             <ul class="contact__checks">
-              <li><label><input type="checkbox" name="deadline" value="asap" required> できるだけ早く</label></li>
+              <li><label><input type="checkbox" name="deadline" value="asap"> できるだけ早く</label></li>
               <li><label><input type="checkbox" name="deadline" value="1month"> 1ヶ月以内</label></li>
               <li><label><input type="checkbox" name="deadline" value="2to3"> 2〜3ヶ月</label></li>
               <li><label><input type="checkbox" name="deadline" value="undecided"> 未定</label></li>
             </ul>
+            <p class="contact__error" data-error-for="deadline">納期を1つ以上選択してください</p>
           </div>
 
           <!-- お問い合わせ内容 -->
@@ -867,7 +870,7 @@
           </div>
 
           <button class="contact__btn" type="submit">送信する</button>
-          <!-- <button class="contact__btn" type="submit"><span>送信する</span></button> -->
+          <p class="contact__success">送信が完了しました。ありがとうございます!</p>
 
         </form>
       </div>

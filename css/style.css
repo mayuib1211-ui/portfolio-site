@@ -379,6 +379,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  opacity: 0.95;
 }
 @media (max-width: 767px) {
   .fv__image {
@@ -1814,6 +1815,25 @@ main {
   .contact__marquee span {
     font-size: 16rem;
   }
+}
+.contact__error {
+  display: none;
+  color: #d16b6b;
+  font-size: 1.3rem;
+  margin-top: 0.4rem;
+}
+.contact__error.is-visible {
+  display: block;
+}
+.contact__success {
+  display: none;
+  color: #4a9d7c;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.6rem;
+}
+.contact__success.is-visible {
+  display: block;
 }
 
 .member-kou {

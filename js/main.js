@@ -151,3 +151,61 @@ document.querySelectorAll('.fadein').forEach(el => {
   fadeObserver.observe(el);
 });
 
+// お問い合わせフォームのバリデーション&Ajax送信
+const contactForm = document.querySelector('.contact__form');
+
+if (contactForm) {
+  const checkGroups = ['type', 'budget', 'deadline'];
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    // グループごとに「1つ以上チェックされてるか」判定
+    checkGroups.forEach(name => {
+      const checkboxes = contactForm.querySelectorAll(`input[name="${name}"]`);
+      const checked = [...checkboxes].some(cb => cb.checked);
+      const errorEl = contactForm.querySelector(`[data-error-for="${name}"]`);
+
+      if (!checked) {
+        isValid = false;
+        errorEl?.classList.add('is-visible');
+      } else {
+        errorEl?.classList.remove('is-visible');
+      }
+    });
+
+    // お名前・メール・プライバシー同意は通常のバリデーションのまま
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    // Ajaxで送信(ページ遷移しない)
+    const formData = new FormData(contactForm);
+    const submitBtn = contactForm.querySelector('.contact__btn');
+    submitBtn.disabled = true;
+
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        contactForm.reset();
+        contactForm.querySelector('.contact__success')?.classList.add('is-visible');
+      } else {
+        alert('送信に失敗しました。時間をおいて再度お試しください。');
+      }
+    } catch (err) {
+      alert('送信に失敗しました。通信環境をご確認ください。');
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
